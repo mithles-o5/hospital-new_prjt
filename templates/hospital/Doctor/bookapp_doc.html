@@ -14,8 +14,9 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <script>
-      {% for p in app %}
+
+    <!-- {% for p in app %}
+    <script>
       function f_{{ p.3 }}() {
         var v1 = document.getElementById('link_{{ p.3 }}');
         var v2 = document.getElementById('date_{{ p.3 }}');
@@ -35,8 +36,9 @@
         //document.getElementById('date_{{ p.3 }}').value='';
         //document.getElementById('time_{{ p.3 }}').value='';   
       }
-      {% endfor %}    
   </script>
+    {% endfor %}   -->
+
   <!-- CSS Files -->
   <link href="{% static 'assets/css/material-dashboard.css'%}" rel="stylesheet" />
   <style media="screen">
@@ -305,7 +307,7 @@ td {
                                         <th class="sps">Appointment Date</th>
                                         <th class="sps">Appointmen Time</th>
                                         <!-- <th class="sps">Room Name</th> -->
-                                        <th class="sps">Save Details</th>
+                                        <!-- <th class="sps">Save Details</th> -->
                                         <th class="sps">Details</th>
                                     </tr>
                                     {% for p in app %}
@@ -316,7 +318,7 @@ td {
                     
                                         <td class="sps">{{p.4}}</td>
                                         <!-- <td class="sps"><input type="text" id="link_{{ p.3 }}" name="link"></td> -->
-                                        <td><a class="btn btn-primary btn-xs" onclick="f_{{p.3}}()">Save</a></td>
+                                        <!-- <td><a class="btn btn-primary btn-xs" onclick="f_{{p.3}}()">Save</a></td> -->
                                         <td><a class="btn btn-primary btn-xs" href="{% url 'bookapp_details_particular_doc.html' p.3  %}">Details</a></td>
                                         
                                   
@@ -325,7 +327,7 @@ td {
                                     {% endfor %}
 
                             </table>
-                            <p>*NOTE: Password for the room you create shoud be your firstname</p>
+                            <!-- <p>*NOTE: Password for the room you create shoud be your firstname</p> -->
                             <p>Only approved appointments are displayed here.</p>
                             <br>
                             <!-- <a class="btn btn-primary btn-round btn-lg"href="https://videocall.agora.io/" target="_blank"><b>Create Link</b></a>  -->
@@ -366,8 +368,8 @@ td {
                                   <tr class="sps">
                                       <th class="sps">Patient Name </th>
                                       <th class="sps">Description </th>
-                                      <th class="sps">Call Date</th>
-                                      <th class="sps">Call Time</th>
+                                      <th class="sps">Appointment Date</th>
+                                      <th class="sps">Appointment Time</th>
                                       <!-- <th class="sps">Room Name</th> -->
                                       <th class="sps">Details</th>
                                   </tr>
